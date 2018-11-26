@@ -1,5 +1,12 @@
 /* Random Quote Generator Styles */
 
+h1 {
+  color: white;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-top: 50px;
+}
+
 body {
   background-color: #36b55c;
   color: white;
@@ -42,7 +49,7 @@ body {
   position: absolute;
 }
 
-.source {
+.name {
   font-size: 1.25rem;;
   letter-spacing: 0.05em;
   line-height: 1.1;
@@ -50,7 +57,7 @@ body {
   margin-right: 4em;
 }
 
-.source:before {
+.name:before {
   content: "—";
 }
 
@@ -63,9 +70,21 @@ body {
   font-style: normal;
 }
 
-.year:before {
+.date:before {
   content: ", ";
   font-style: normal;
+}
+
+.tag {
+  text-transform: lowercase; 
+}
+
+.tag:before {
+  content: " [";
+}
+
+.tag:after {
+  content: "]";
 }
 
 #loadQuote {
@@ -78,12 +97,12 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
+  background-color: rgba(255,255,255,.15);
   padding: 15px 0;
   transition: .5s ;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  background-color: rgba(255,255,255,.65);
 }
 
 #loadQuote:focus {
