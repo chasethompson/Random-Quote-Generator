@@ -48,7 +48,7 @@ var quotes = [
 var i;
 var timer;
 //Background colors courtesy of The Visme Blog article on Flat Web Design
-var backgroundColors = [ '#E27D60','#85DCB','#E8A87C','#C38D9E','#41B3A3',];
+var bgColors = [ '#E27D60','#85DCB','#E8A87C','#C38D9E','#41B3A3',];
 
 
 //This function will create a random quote from array
@@ -59,8 +59,8 @@ function getRandomQuote(){
 
 //This function changes the background color using color array
 function colorChange(){
-  var randomColor = Math.floor(Math.random() * backgroundColors.length);
-  document.querySelector('body').style.backgroundColor = backgroundColors[randomColor];
+  var randomColor = Math.floor(Math.random() * bgColors.length);
+  document.querySelector('body').style.bgcolor = bgColors[randomColor];
 }
 
 //Function generates quote to display on page
