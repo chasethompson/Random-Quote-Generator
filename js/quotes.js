@@ -48,7 +48,7 @@ var quotes = [
 var i;
 var timer;
 //Background colors courtesy of The Visme Blog article on Flat Web Design
-var bgColors = [ '#E27D60','#85DCB','#E8A87C','#C38D9E','#41B3A3',];
+var bgColors = [ '#E27D60','#85DCB','#E8A87C','#C38D9E','#41B3A3'];
 
 
 //This function will create a random quote from array
@@ -73,11 +73,9 @@ function printQuote(){
   i = selectedQuote.quote;
   var messageToPrint = '<p class="quote">' + selectedQuote.quote  + '</p>';
   messageToPrint += '<p class="source">' + selectedQuote.source;
-  if(selectedQuote['date']){
-    messageToPrint += '<span class="date">' + selectedQuote.date +  '</span>';
-  }
-  messageToPrint += '</p>';
-  messageToPrint += '<p class="tag">Tag: ' + selectedQuote.tag +  '</p>';
+  messageToPrint += '<span class="date">' + selectedQuote.date + '</span>';
+  messageToPrint += '<br>';
+  messageToPrint += '<p class="tag">Tag: ' + selectedQuote.tag + '</p>';
   
   document.getElementById('quote-box').innerHTML = messageToPrint;
   intervalTimer();
@@ -88,7 +86,7 @@ printQuote();
 
 function intervalTimer() {
   clearInterval(timer);
-  timer = setInterval(printQuote, 7000);
+  timer = setInterval(printQuote, 7500);
 }
 
 //Event Listener on button which will call print func
